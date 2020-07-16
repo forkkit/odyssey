@@ -1,0 +1,14 @@
+{
+  "name": "@okta/odyssey-icons",
+  "version": "0.3.0",
+  "description": "Odyssey's icon library",
+  "homepage": "https://github.com/okta/odyssey#readme",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okta/odyssey.git"
+  },
+  "bugs": {
+    "url": "https://github.com/okta/odyssey/issues"
+  }
+}
