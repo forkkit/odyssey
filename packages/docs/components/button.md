@@ -1,17 +1,94 @@
-# Button
+---
+template: component
+name: Button
+lead: An Odyssey button appears as a rounded rectangle that is wider than it is tall, with a descriptive caption in its center. Users press the button by clicking it with a pointer controlled by a mouse, keystrokes can also be used to execute the command of a button.
+links:
+  - icon: github
+    label: View source
+    href: https://github.com/okta/odyssey/blob/master/packages/odyssey/src/scss/components/_button.scss
+  - icon: figma
+    label: View designs
+    href: https://www.figma.com/file/pULYhG6KIhBsnQTFjkpTFv/Buttons?node-id=2660%3A365
+---
 
-Buttons are primarily used for in-page interactions like form submissions.
+::: slot overview
+## Button types
+In Odyssey there are 5 different button types; Primary, Secondary, Danger, Clear, and Overlay.
 
-## Variants
+#### Primary
+Our default button is used for primary action on a page or view. For example, “Save”. Use this button sparingly to provide a clear target for users to get to. 
 
-Buttons are primarily used for in-page interactions like form submissions.
+It’s best to use this button on a white background.
 
-### Primary
+<Example/>
 
-Primary buttons, our default, are used for the principal action in a view. For example, "Save".
+<figure>
+  <button class="ods-button">Primary</button>
+  <button class="ods-button is-ods-button-hover">Hover</button>
+  <button class="ods-button is-ods-button-focus">Focus</button>
+  <button disabled="disabled" class="ods-button">Disabled</button>
+</figure>
 
-<figure class="nimatron--example">
-  <div class="nimatron--rendered">
+#### Secondary
+Ideal for a secondary actions to compliment the Primary button. Similar to the Primary button, use this button sparingly to provide focus to the user. 
+
+It’s best to use this button on a white background.
+
+<figure>
+  <button class="ods-button is-ods-button-secondary">Secondary</button>
+  <button class="ods-button is-ods-button-secondary is-ods-button-hover">Hover</button>
+  <button class="ods-button is-ods-button-secondary is-ods-button-focus">Focus</button>
+  <button disabled="disabled" class="ods-button is-ods-button-secondary">Disabled</button>
+</figure>
+
+#### Danger
+Use this button for scenarios where a user may be deleting information or completing a task that could not be reversed. 
+
+It’s best to use this button on a white background.
+
+<figure>
+  <button class="ods-button is-ods-button-danger">Danger</button>
+  <button class="ods-button is-ods-button-danger is-ods-button-hover">Hover</button>
+  <button class="ods-button is-ods-button-danger is-ods-button-focus">Focus</button>
+  <button disabled="disabled" class="ods-button is-ods-button-danger">Disabled</button>
+</figure>
+
+#### Clear
+These are used for in-page interactions that modify the visible UI but do not modify data or an ongoing process. For example, hiding or showing a password field. 
+
+They pair well with Primary and Secondary buttons. 
+
+It’s best to use this button on a white background.
+
+<figure>
+  <button class="ods-button is-ods-button-clear">Secondary</button>
+  <button class="ods-button is-ods-button-clear is-ods-button-hover">Hover</button>
+  <button class="ods-button is-ods-button-clear is-ods-button-focus">Focus</button>
+  <button disabled="disabled" class="ods-button is-ods-button-clear">Disabled</button>
+</figure>
+
+#### Overlay
+These buttons may only be used on top of a “Base Color” such as Purple 500 or on top of a colored background, photo, or illustration. They should only be used in the scenario where Primary, Secondary, and regular text links cannot be used.
+
+Lastly, they only exist at the large size.
+
+<figure>
+  <button class="ods-button is-ods-button-overlay">Overlay</button>
+  <button class="ods-button is-ods-button-overlay is-ods-button-hover">Hover</button>
+  <button class="ods-button is-ods-button-overlay is-ods-button-focus">Focus</button>
+  <button disabled="disabled" class="ods-button is-ods-button-overlay">Disabled</button>
+</figure>
+
+<hr />
+
+:::
+
+::: slot scss
+
+##### Primary
+
+<figure class="ods--example">
+  <div class="ods--rendered">
     <button class="ods-button">Primary</button>
     <button class="ods-button is-ods-button-hover">Hover</button>
     <button class="ods-button is-ods-button-focus">Focus</button>
@@ -24,12 +101,10 @@ Primary buttons, our default, are used for the principal action in a view. For e
   ```
 </figure>
 
-### Secondary
+##### Secondary
 
-Secondary buttons indicate other safe actions a user might take.
-
-<figure class="nimatron--example">
-  <div class="nimatron--rendered">
+<figure class="ods--example">
+  <div class="ods--rendered">
     <button class="ods-button is-ods-button-secondary">Secondary</button>
     <button class="ods-button is-ods-button-secondary is-ods-button-hover">Hover</button>
     <button class="ods-button is-ods-button-secondary is-ods-button-focus">Focus</button>
@@ -42,12 +117,10 @@ Secondary buttons indicate other safe actions a user might take.
   ```
 </figure>
 
-### Danger
+##### Danger
 
-These buttons indicate actions that, while the primary focus of a view, are dangerous or destructive. For example, "Delete".
-
-<figure class="nimatron--example">
-  <div class="nimatron--rendered">
+<figure class="ods--example">
+  <div class="ods--rendered">
     <button class="ods-button is-ods-button-danger">Danger</button>
     <button class="ods-button is-ods-button-danger is-ods-button-hover">Hover</button>
     <button class="ods-button is-ods-button-danger is-ods-button-focus">Focus</button>
@@ -60,14 +133,10 @@ These buttons indicate actions that, while the primary focus of a view, are dang
   ```
 </figure>
 
-### Overlay
+##### Overlay
 
-These buttons may only be used on top of a “Base Color” such as Purple 500, or on top of a photo or illustration. They should only be used in the scenario where Primary, Secondary, and Clear buttons cannot be used.
-
-Lastly, they only exist at the Large size.
-
-<figure class="nimatron--example">
-  <div class="nimatron--rendered is-rendered-success">
+<figure class="ods--example">
+  <div class="ods--rendered is-rendered-success">
     <button class="ods-button is-ods-button-overlay">Overlay</button>
     <button class="ods-button is-ods-button-overlay is-ods-button-hover">Hover</button>
     <button class="ods-button is-ods-button-overlay is-ods-button-focus">Focus</button>
@@ -80,14 +149,10 @@ Lastly, they only exist at the Large size.
   ```
 </figure>
 
-### Clear
+##### Clear
 
-These are used for in-page interactions that modify the visible UI but do not modify data or an ongoing process. For example, hiding or showing a password field.
-
-They also pair well with Primary and Secondary buttons.
-
-<figure class="nimatron--example">
-  <div class="nimatron--rendered">
+<figure class="ods--example">
+  <div class="ods--rendered">
     <button class="ods-button is-ods-button-clear">Clear</button>
     <button class="ods-button is-ods-button-clear is-ods-button-hover">Hover</button>
     <button class="ods-button is-ods-button-clear is-ods-button-focus">Focus</button>
@@ -100,19 +165,7 @@ They also pair well with Primary and Secondary buttons.
   ```
 </figure>
 
-## Guidelines
-
-**Do** use buttons to indicate the important actions that can be taken in a view.
-
-**Don't** use buttons to navigate users around the site or product; use links instead.
-
-### Accessibility
-
-Buttons should display a visible `:focus` state with users interact via keyboard.
-
-Color is not a clear affordance for all users, please use clear, concise copy to label buttons. Good rules of thumb: use three or less words to describe your action; start your label with a verb (e.g. "Download Report" vs "Report PDF").
-
-Use the `<button>` element instead of `<a>` whenever possible. The keyboard and screen reader interaction for these elements is different. <kbd>Space</kbd> will trigger a `<button>`; <kbd>Enter</kbd> will trigger an `<a>`.
+---
 
 ## Implementation
 
@@ -162,3 +215,4 @@ Semantic states can be combined to produce Secondary Danger styles.
     </tbody>
   </table>
 </figure>
+:::
