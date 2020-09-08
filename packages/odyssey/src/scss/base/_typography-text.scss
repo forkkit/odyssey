@@ -56,6 +56,10 @@ p {
   margin-bottom: $spacing-s;
   font-size: $size-body-sentence;
 
+  details & {
+    font-size: ms(0);
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -121,10 +125,6 @@ small {
 
 details {
   font-size: ms(0);
-
-  p {
-    font-size: ms(0);
-  }
 }
 
 summary {
