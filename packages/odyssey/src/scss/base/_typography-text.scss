@@ -61,6 +61,12 @@ p {
   }
 }
 
+pre {
+  font-family: $mono-font-family;
+  white-space: pre-wrap;
+  tab-size: 2;
+}
+
 cite {
   font-style: italic;
 }
@@ -111,6 +117,24 @@ s {
 
 small {
   font-size: $size-body-caption;
+}
+
+details {
+  font-size: ms(0);
+
+  p {
+    font-size: ms(0);
+  }
+}
+
+summary {
+  font-size: ms(1);
+  font-weight: 600;
+  cursor: default;
+
+  &:focus {
+    @include outline;
+  }
 }
 
 kbd {
